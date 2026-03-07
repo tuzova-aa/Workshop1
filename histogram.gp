@@ -2,27 +2,22 @@
 set terminal pngcairo size 900,550 enhanced font "Arial,12"
 set output "plot2_histogram.png"
 
-set title "Гистограмма распределения результатов" font "Arial,14"
-set xlabel "Значение"
-set ylabel "Число попаданий"
+set xlabel "R, Ом"
+set ylabel "Δn"
 
-set style data histograms
-set style fill solid 0.7 border lc rgb "#08519c"
-set boxwidth 0.03
+set style fill solid 0.7 border lc rgb "#32CD32"
+set boxwidth 0.042
 
-set xrange [3.855:4.145]
-set yrange [0:15]
-set xtics 0.03 rotate by -45
+set xrange [3.880:4.130]
+set yrange [0:20]
+set xtics 0.042 rotate by -45
 set ytics 1
 set grid ytics
 
-plot "-" using 1:2 with boxes lc rgb "#2171b5" title "Частота попаданий"
-3.895 2
-3.925 10
-3.955 12
-3.985 12
-4.015 9
-4.045 4
-4.075 0
-4.105 1
+plot "-" using 1:2 with boxes lc rgb "#32CD32" notitle
+3.921 13
+3.963 16
+4.005 16
+4.047 4
+4.089 1
 e
